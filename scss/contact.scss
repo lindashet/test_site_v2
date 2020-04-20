@@ -1,0 +1,124 @@
+$color_black: #1d191f;
+$color_white: #ffffff;
+$color_light_gray: #a0a0a0;
+$color_ash_gray: #4b4355;
+$color_purple: #9664e2;
+$color_yellow: #ffda47;
+
+$big_heading: #ffda47;
+
+%transition {
+  transition: all 0.3s ease;
+}
+
+@mixin shadow {
+  box-shadow: 2px 2px 5px 0px rgba($color_black, 0.2);
+}
+
+// -----------contact-------------
+.contact {
+  padding-bottom: 20px;
+  margin-top: 50px;
+}
+
+.contact_bg {
+  border-radius: 5px;
+  background-color: #f5f5f5;
+  @include shadow;
+}
+
+.contact_content {
+  width: 100%;
+  max-width: 300px;
+  position: relative;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.contact_title {
+  font-size: 1.5rem;
+  color: $color-light-gray;
+  font-weight: 700;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.follow_info {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  color: $color_white;
+  font-weight: 300;
+}
+
+.btn-default {
+  width: 100%;
+  color: $color_purple;
+  background-color: $color_white;
+  border: $color_purple 1px solid;
+  &:hover {
+    color: $color_white;
+  }
+}
+
+.contact input.form-control {
+  background-color: $color-white;
+  border: 0;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  color: $color_ash_gray;
+}
+
+.contact textarea.form-control {
+  background-color: $color-white;
+  border: 0;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  color: $color_ash_gray;
+}
+
+.contact input.form-control::placeholder,
+.contact textarea.form-control::placeholder {
+  color: $color_white;
+}
+
+.input_title {
+  font-size: 1rem;
+}
+
+.social {
+  margin-top: 100px;
+  i {
+    font-size: 42px;
+    color: $color_ash_gray;
+  }
+}
+
+.company_info {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  p {
+    font-size: 14px;
+    color: $color_ash_gray;
+  }
+
+  p:not(:last-child):after {
+    content: "　　|　　";
+  }
+}
+
+@media (max-width: 767px) {
+  .company_info {
+    flex-direction: column;
+    text-align: center;
+    p:not(:last-child):after {
+      content: "";
+    }
+  }
+}
